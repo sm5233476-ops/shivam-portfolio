@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shivam Mishra | Websites and AI Assistants for Local Businesses</title>
+  <meta name="description" content="Fast, animated, mobile-first websites and 24/7 AI chat assistants for local service businesses and online stores. Built by Shivam Mishra.">
+  
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Progressive Enhancement & JS Failsafe -->
+  <script>
+    document.documentElement.classList.add('has-js');
+    setTimeout(function() {
+      document.documentElement.classList.add('js-ready');
+    }, 4000);
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Follower (Pointer & Hover fine devices only) -->
+  <div id="cursor-follower" aria-hidden="true">
+    <span id="cursor-follower-label">View</span>
+  </div>
+
+  <!-- ======================================================================
+       1. STICKY NAVBAR
+       ====================================================================== -->
+  <header id="site-header" class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="site-logo" aria-label="Shivam Mishra Portfolio Home">
+        <span></span> Shivam Mishra
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#assistant" class="nav-link">AI Assistant</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/919899452192" id="nav-whatsapp-btn" class="btn btn-lime btn-sm nav-cta-btn magnetic" target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+        <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu-dialog">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dialog -->
+  <dialog id="mobile-menu-dialog" class="mobile-dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-dialog-header">
+      <span class="site-logo"><span></span> Shivam Mishra</span>
+      <button id="mobile-menu-close" class="mobile-dialog-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#work" class="mobile-nav-link">Work</a>
+      <a href="#assistant" class="mobile-nav-link">AI Assistant</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#process" class="mobile-nav-link">Process</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-dialog-footer">
+      <a href="https://wa.me/919899452192" class="btn btn-lime" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot-pulse" aria-hidden="true"></span>
+              <span>Available for new projects</span>
+            </div>
+
+            <h1 class="hero-title" data-animate="hero-words">
+              I build websites that turn <span class="font-serif-italic text-accent">visitors</span> into customers.
+            </h1>
+
+            <p class="hero-subtitle">
+              Fast, animated websites and AI chat assistants for local businesses and online stores.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#work" class="btn btn-lime magnetic">See my work</a>
+              <a href="https://wa.me/919899452192" id="hero-whatsapp-btn" class="btn btn-secondary magnetic" target="_blank" rel="noopener noreferrer">
+                Chat on WhatsApp
+              </a>
+            </div>
+
+            <p class="hero-disclaimer-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Concept projects for dental, roofing and e-commerce.</span>
+            </p>
+          </div>
+
+          <!-- Hero CSS Device Frames with Crossfading Mockups -->
+          <div class="hero-visual-wrapper" id="hero-devices">
+            <!-- Pure CSS Laptop Frame -->
+            <div class="device-frame-laptop" aria-hidden="true">
+              <div class="laptop-top-camera"></div>
+              <div class="laptop-screen" id="hero-laptop-screen">
+                <img src="dental-laptop.jpg" alt="Lumina Dental Studio on laptop" width="1280" height="800" class="crossfade-slide crossfade-slide--active" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Lumina Dental Studio</text></svg>'">
+                <img src="roofing-laptop.jpg" alt="Ironcrest Roofing on laptop" width="1280" height="800" class="crossfade-slide" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Ironcrest Roofing</text></svg>'">
+                <img src="coffee-laptop.jpg" alt="Cinder & Cedar Coffee on laptop" width="1280" height="800" class="crossfade-slide" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Cinder &amp; Cedar Coffee</text></svg>'">
+              </div>
+              <div class="laptop-base"><div class="laptop-notch"></div></div>
+            </div>
+
+            <!-- Pure CSS Phone Frame in Front -->
+            <div class="device-frame-phone" aria-hidden="true">
+              <div class="phone-island"></div>
+              <div class="phone-screen" id="hero-phone-screen">
+                <img src="dental-phone.jpg" alt="Lumina Dental Studio on phone" width="390" height="844" class="crossfade-slide crossfade-slide--active" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Dental Mobile</text></svg>'">
+                <img src="roofing-phone.jpg" alt="Ironcrest Roofing on phone" width="390" height="844" class="crossfade-slide" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Roofing Mobile</text></svg>'">
+                <img src="coffee-phone.jpg" alt="Cinder & Cedar Coffee on phone" width="390" height="844" class="crossfade-slide" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Coffee Mobile</text></svg>'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. MARQUEE RIBBON (Two rows, opposite directions)
+         ====================================================================== -->
+    <section class="marquee-section" aria-label="Capabilities ribbon">
+      <div class="marquee-row">
+        <div class="marquee-track">
+          <div class="marquee-item">Dental <span class="marquee-bullet">•</span> Roofing <span class="marquee-bullet">•</span> E-commerce <span class="marquee-bullet">•</span> AI assistant <span class="marquee-bullet">•</span> Booking flows <span class="marquee-bullet">•</span> Calculators <span class="marquee-bullet">•</span> Smooth animations <span class="marquee-bullet">•</span></div>
+          <div class="marquee-item">Dental <span class="marquee-bullet">•</span> Roofing <span class="marquee-bullet">•</span> E-commerce <span class="marquee-bullet">•</span> AI assistant <span class="marquee-bullet">•</span> Booking flows <span class="marquee-bullet">•</span> Calculators <span class="marquee-bullet">•</span> Smooth animations <span class="marquee-bullet">•</span></div>
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track--reverse">
+          <div class="marquee-item">Smooth animations <span class="marquee-bullet">•</span> Calculators <span class="marquee-bullet">•</span> Booking flows <span class="marquee-bullet">•</span> AI assistant <span class="marquee-bullet">•</span> E-commerce <span class="marquee-bullet">•</span> Roofing <span class="marquee-bullet">•</span> Dental <span class="marquee-bullet">•</span></div>
+          <div class="marquee-item">Smooth animations <span class="marquee-bullet">•</span> Calculators <span class="marquee-bullet">•</span> Booking flows <span class="marquee-bullet">•</span> AI assistant <span class="marquee-bullet">•</span> E-commerce <span class="marquee-bullet">•</span> Roofing <span class="marquee-bullet">•</span> Dental <span class="marquee-bullet">•</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. WORK SECTION (3 Stacking Sticky Cards)
+         ====================================================================== -->
+    <section id="work" class="section-padding" aria-label="Concept Portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title">Concept builds built for real business conversion.</h2>
+          <p class="section-desc">
+            These are fully-functional concept projects engineered for high-intent local services and specialty retail. Every flow, calculator, and booking milestone is interactive.
+          </p>
+        </div>
+
+        <div id="work-cards-container">
+          <!-- Card 1: Lumina Dental Studio -->
+          <article class="project-card project-card--sticky" data-project-id="lumina-dental" data-cursor="view">
+            <div class="project-card-layout">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-industry">Dental Healthcare</span>
+                  <span class="badge-concept">Concept project</span>
+                </div>
+                <h3 class="project-card-title">Lumina Dental Studio</h3>
+                <p class="project-card-solution">
+                  High-ticket dental patients need immediate treatment clarity and transparent financing before scheduling. Built with an interactive amortization calculator, smile transformation sliders, and a low-friction 3-step booking flow.
+                </p>
+                <div class="project-chips-list">
+                  <span class="project-chip">Financing Amortization Calculator</span>
+                  <span class="project-chip">3-Step Booking Flow</span>
+                  <span class="project-chip">Before &amp; After Smile Slider</span>
+                  <span class="project-chip">Treatment FAQ Accordion</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-lime btn-sm preview-open-btn magnetic" data-project-id="lumina-dental">Live preview</button>
+                  <a href="https://lumina-dental-studio-iota.vercel.app/" class="btn btn-secondary btn-sm magnetic" target="_blank" rel="noopener noreferrer">Open site &#8599;</a>
+                </div>
+              </div>
+              <div class="project-card-preview">
+                <div class="device-frame-laptop">
+                  <div class="laptop-top-camera"></div>
+                  <div class="laptop-screen">
+                    <img src="dental-laptop.jpg" alt="Lumina Dental Studio desktop view" width="1280" height="800" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Lumina Dental Studio</text></svg>'">
+                  </div>
+                  <div class="laptop-base"><div class="laptop-notch"></div></div>
+                </div>
+                <div class="device-frame-phone">
+                  <div class="phone-island"></div>
+                  <div class="phone-screen">
+                    <img src="dental-phone.jpg" alt="Lumina Dental Studio mobile view" width="390" height="844" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Dental Mobile</text></svg>'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Ironcrest Roofing & Restoration -->
+          <article class="project-card project-card--sticky" data-project-id="ironcrest-roofing" data-cursor="view">
+            <div class="project-card-layout">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-industry">Home Services &amp; Contracting</span>
+                  <span class="badge-concept">Concept project</span>
+                </div>
+                <h3 class="project-card-title">Ironcrest Roofing &amp; Restoration</h3>
+                <p class="project-card-solution">
+                  Property owners facing severe storm damage need quick estimates without sales friction. Engineered with an instant square-footage replacement cost estimator, storm-readiness emergency sections, and a direct free inspection scheduler.
+                </p>
+                <div class="project-chips-list">
+                  <span class="project-chip">Instant Roof Estimate Calculator</span>
+                  <span class="project-chip">Free Inspection Booking Flow</span>
+                  <span class="project-chip">Storm-Damage Response Hub</span>
+                  <span class="project-chip">Project Transformation Sliders</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-lime btn-sm preview-open-btn magnetic" data-project-id="ironcrest-roofing">Live preview</button>
+                  <a href="https://roofing-portfolio-two.vercel.app/" class="btn btn-secondary btn-sm magnetic" target="_blank" rel="noopener noreferrer">Open site &#8599;</a>
+                </div>
+              </div>
+              <div class="project-card-preview">
+                <div class="device-frame-laptop">
+                  <div class="laptop-top-camera"></div>
+                  <div class="laptop-screen">
+                    <img src="roofing-laptop.jpg" alt="Ironcrest Roofing desktop view" width="1280" height="800" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Ironcrest Roofing</text></svg>'">
+                  </div>
+                  <div class="laptop-base"><div class="laptop-notch"></div></div>
+                </div>
+                <div class="device-frame-phone">
+                  <div class="phone-island"></div>
+                  <div class="phone-screen">
+                    <img src="roofing-phone.jpg" alt="Ironcrest Roofing mobile view" width="390" height="844" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Roofing Mobile</text></svg>'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Cinder & Cedar Coffee Roasters -->
+          <article class="project-card project-card--sticky" data-project-id="cinder-cedar" data-cursor="view">
+            <div class="project-card-layout">
+              <div class="project-card-content">
+                <div class="project-card-meta">
+                  <span class="project-card-industry">Specialty E-Commerce</span>
+                  <span class="badge-concept">Concept project</span>
+                </div>
+                <h3 class="project-card-title">Cinder &amp; Cedar Coffee Roasters</h3>
+                <p class="project-card-solution">
+                  Specialty buyers convert when origin notes and grind varieties are effortlessly clear. Developed with instant sensory filters, an interactive slide-out cart with dynamic free-shipping progress, and recurring coffee subscription options.
+                </p>
+                <div class="project-chips-list">
+                  <span class="project-chip">Tasting Notes &amp; Origin Filters</span>
+                  <span class="project-chip">Slide-Out Cart with Free-Shipping Bar</span>
+                  <span class="project-chip">Demo Promo Code &amp; Checkout Flow</span>
+                  <span class="project-chip">Recurring Coffee Subscriptions</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn btn-lime btn-sm preview-open-btn magnetic" data-project-id="cinder-cedar">Live preview</button>
+                  <a href="https://cinder-cedar-coffee-roasters.vercel.app/" class="btn btn-secondary btn-sm magnetic" target="_blank" rel="noopener noreferrer">Open site &#8599;</a>
+                </div>
+              </div>
+              <div class="project-card-preview">
+                <div class="device-frame-laptop">
+                  <div class="laptop-top-camera"></div>
+                  <div class="laptop-screen">
+                    <img src="coffee-laptop.jpg" alt="Cinder & Cedar Coffee desktop store" width="1280" height="800" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1280\' height=\'800\' fill=\'%2314161C\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23C8FF3D\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>Cinder &amp; Cedar Coffee</text></svg>'">
+                  </div>
+                  <div class="laptop-base"><div class="laptop-notch"></div></div>
+                </div>
+                <div class="device-frame-phone">
+                  <div class="phone-island"></div>
+                  <div class="phone-screen">
+                    <img src="coffee-phone.jpg" alt="Cinder & Cedar Coffee mobile view" width="390" height="844" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'390\' height=\'844\' fill=\'%23181B22\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23F2EFE8\' font-size=\'20\' font-family=\'sans-serif\' text-anchor=\'middle\'>Coffee Mobile</text></svg>'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessible Modal Live Preview Dialog -->
+    <dialog id="preview-dialog" class="preview-dialog" aria-modal="true" aria-labelledby="preview-dialog-title">
+      <div class="preview-dialog-bar">
+        <div class="preview-dialog-info">
+          <span id="preview-dialog-title" class="preview-dialog-title">Live Preview</span>
+          <span class="badge-concept">Live Staging</span>
+        </div>
+        
+        <div class="preview-device-toggle" role="group" aria-label="Device view toggle">
+          <button type="button" id="preview-device-desktop" class="preview-toggle-btn is-active">Desktop</button>
+          <button type="button" id="preview-device-phone" class="preview-toggle-btn">Phone</button>
+        </div>
+
+        <div class="preview-dialog-actions">
+          <a href="#" id="preview-external-link" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Open in new tab &#8599;</a>
+          <button type="button" id="preview-dialog-close" class="btn btn-secondary btn-sm" aria-label="Close live preview">&times; Close</button>
+        </div>
+      </div>
+
+      <div class="preview-dialog-stage">
+        <div id="preview-frame-wrapper" class="preview-mode-desktop">
+          <iframe id="preview-iframe" title="Interactive project preview" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer"></iframe>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ======================================================================
+         5. AI ASSISTANT SECTION
+         ====================================================================== -->
+    <section id="assistant" class="section-padding" aria-label="AI Chat Assistant Solution">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">24/7 Automation</div>
+          <h2 class="section-title">A website that answers your customers while you sleep.</h2>
+          <p class="section-desc">
+            Local service businesses lose up to 40% of their inquiries simply because calls go to voicemail after 6 PM. An embedded AI chat assistant answers customer questions instantly, qualifies their project requirements, and captures verified contact details.
+          </p>
+        </div>
+
+        <div class="ai-benefits-grid">
+          <div class="ai-benefit-card">
+            <span class="ai-benefit-num">01</span>
+            <h3 class="ai-benefit-title">Zero missed after-hours inquiries</h3>
+            <p class="ai-benefit-desc">
+              Whether a homeowner needs emergency roof repairs at 11 PM or a patient has a question about dental financing on Sunday, your site delivers accurate, instant answers without keeping visitors waiting.
+            </p>
+          </div>
+
+          <div class="ai-benefit-card">
+            <span class="ai-benefit-num">02</span>
+            <h3 class="ai-benefit-title">Lead qualification &amp; triage</h3>
+            <p class="ai-benefit-desc">
+              Instead of generic contact forms, the assistant asks intelligent clarifying questions: service type, timeline, property size, or budget preferences. You get fully qualified leads ready to close.
+            </p>
+          </div>
+
+          <div class="ai-benefit-card">
+            <span class="ai-benefit-num">03</span>
+            <h3 class="ai-benefit-title">Instant delivery to your WhatsApp</h3>
+            <p class="ai-benefit-desc">
+              As soon as a visitor leaves their name and phone number, the complete summary is delivered straight to your email or WhatsApp so you can follow up with full context in minutes.
+            </p>
+          </div>
+        </div>
+
+        <div id="assistant-helper-note" class="assistant-live-prompt" style="display: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span>Try it: the chat bubble at the bottom right of this page is the assistant.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. INSTANT QUOTE BUILDER
+         ====================================================================== -->
+    <section id="services" class="section-padding" aria-label="Services & Quote Estimator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Transparent Pricing</div>
+          <h2 class="section-title">Instant project quote builder.</h2>
+          <p class="section-desc">
+            Select what you need below to calculate an honest starting investment range and realistic delivery timeline.
+          </p>
+        </div>
+
+        <div id="quote-builder" class="quote-builder-wrapper">
+          <div class="quote-builder-grid">
+            <div class="quote-options-column">
+              <!-- Project Type Selection -->
+              <div class="quote-group-title">
+                1. Select Website Type <span>Required</span>
+              </div>
+              <div id="quote-type-group" class="quote-radio-list" role="radiogroup" aria-label="Website Type">
+                <label class="quote-option-label">
+                  <input type="radio" name="projectType" value="landing-page" checked>
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">Landing Page</span>
+                      <span class="quote-option-price">From $400</span>
+                    </div>
+                    <p class="quote-option-subtext">Single focused page built for one service, product launch, or advertising campaign (3–5 days).</p>
+                  </div>
+                </label>
+
+                <label class="quote-option-label">
+                  <input type="radio" name="projectType" value="business-website">
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">Business Website (up to 5 pages)</span>
+                      <span class="quote-option-price">From $900</span>
+                    </div>
+                    <p class="quote-option-subtext">Complete multi-page presence: Home, About, Services, Case Studies/Gallery, Contact (7–10 days).</p>
+                  </div>
+                </label>
+
+                <label class="quote-option-label">
+                  <input type="radio" name="projectType" value="ecommerce-store">
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">E-Commerce Store</span>
+                      <span class="quote-option-price">From $1,500</span>
+                    </div>
+                    <p class="quote-option-subtext">Custom storefront, catalog filtering, cart drawer, checkout setup, and product showcases (14–21 days).</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Extras & Add-ons -->
+              <div class="quote-group-title">
+                2. Functional Extras <span>Optional</span>
+              </div>
+              <div id="quote-extras-group" class="quote-radio-list">
+                <label class="quote-option-label">
+                  <input type="checkbox" name="extraOption" value="extra-booking">
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">Booking System</span>
+                      <span class="quote-option-price">+$150</span>
+                    </div>
+                    <p class="quote-option-subtext">Multi-step appointment scheduling flow connected to your calendar.</p>
+                  </div>
+                </label>
+
+                <label class="quote-option-label">
+                  <input type="checkbox" name="extraOption" value="extra-calculator">
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">Calculator or Estimator</span>
+                      <span class="quote-option-price">+$150</span>
+                    </div>
+                    <p class="quote-option-subtext">Interactive pricing, financing amortization, or cost estimation tool for visitors.</p>
+                  </div>
+                </label>
+
+                <label class="quote-option-label">
+                  <input type="checkbox" name="extraOption" value="extra-ai-assistant">
+                  <div class="quote-option-content">
+                    <div class="quote-option-header">
+                      <span class="quote-option-name">AI Chat Assistant</span>
+                      <span class="quote-option-price">+$150</span>
+                    </div>
+                    <p class="quote-option-subtext">Embedded 24/7 intelligent chat widget to answer customer questions and capture leads.</p>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Extra Pages Stepper -->
+              <div class="quote-stepper-row">
+                <div>
+                  <div class="quote-option-name">Additional Pages</div>
+                  <div class="quote-option-subtext">+$80 per additional page (up to 5 max)</div>
+                </div>
+                <div class="quote-stepper-ctrl">
+                  <button type="button" id="quote-pages-dec" class="stepper-btn" aria-label="Decrease extra pages" disabled>&minus;</button>
+                  <span id="quote-pages-count" aria-live="polite">0</span>
+                  <button type="button" id="quote-pages-inc" class="stepper-btn" aria-label="Increase extra pages">&plus;</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote Summary Box -->
+            <div class="quote-summary-column">
+              <div class="quote-summary-box">
+                <div>
+                  <span class="quote-estimate-label">Estimated Investment Range</span>
+                  <div class="quote-estimate-price">
+                    $<span id="quote-price-min">400</span> &ndash; $<span id="quote-price-max">640</span>
+                  </div>
+                  <div class="quote-estimate-timeline">
+                    <span>Typical delivery:</span>
+                    <strong id="quote-timeline">3–5 days</strong>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="#" id="quote-whatsapp-btn" class="btn btn-lime" style="width: 100%;" target="_blank" rel="noopener noreferrer">
+                    Send this to Shivam on WhatsApp
+                  </a>
+                  <p class="quote-estimate-note">
+                    Starting estimate only. Final price after a short call. Timelines start once content is ready.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. PROCESS SECTION
+         ====================================================================== -->
+    <section id="process" class="section-padding" aria-label="Working Process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">How We Work</div>
+          <h2 class="section-title">Four steps from concept to launch.</h2>
+          <p class="section-desc">
+            A clear, predictable progression designed to keep you informed at every milestone without surprises.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <span class="process-step-num">01</span>
+            <h3 class="process-step-title">Short Call</h3>
+            <p class="process-step-desc">
+              A focused 20-minute discovery call to clarify your goals, content requirements, and ideal customer journey.
+            </p>
+            <span class="process-step-duration">Day 1</span>
+          </div>
+
+          <div class="process-card">
+            <span class="process-step-num">02</span>
+            <h3 class="process-step-title">Design Preview</h3>
+            <p class="process-step-desc">
+              A working interactive mockup delivered within days so you can test the real flow on your phone.
+            </p>
+            <span class="process-step-duration">Days 2–4</span>
+          </div>
+
+          <div class="process-card">
+            <span class="process-step-num">03</span>
+            <h3 class="process-step-title">Build &amp; Polish</h3>
+            <p class="process-step-desc">
+              Production-grade semantic coding, performance optimization, and buttery smooth GSAP animations.
+            </p>
+            <span class="process-step-duration">Days 5–12</span>
+          </div>
+
+          <div class="process-card">
+            <span class="process-step-num">04</span>
+            <h3 class="process-step-title">Launch &amp; Support</h3>
+            <p class="process-step-desc">
+              Domain connection, SSL verification, SEO tags, and 30 days of post-launch technical assistance.
+            </p>
+            <span class="process-step-duration">Launch Day</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. WHY WORK WITH ME & TOOLS ROW
+         ====================================================================== -->
+    <section class="section-padding" aria-label="Why Work With Me">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Direct Collaboration</div>
+          <h2 class="section-title">Why work with an independent developer.</h2>
+          <p class="section-desc">
+            No agency account managers, no ticket queues, and no bloated markups. You work directly with the engineer building your site.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <h3 class="why-card-title">Clear WhatsApp updates</h3>
+            <p class="why-card-desc">
+              Daily concise progress notes and video walkthroughs. No radio silence or wondering what milestone is being worked on.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-card-title">A working preview early</h3>
+            <p class="why-card-desc">
+              You touch and test a live staging URL before writing any final checks. Feedback happens on real screens, not static PDF decks.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-card-title">Mobile-first &amp; fast</h3>
+            <p class="why-card-desc">
+              Zero bloated page builders. Handcrafted HTML, CSS, and JS with 95+ PageSpeed scores that ensure customers don't bounce.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-card-title">Time zone overlap</h3>
+            <p class="why-card-desc">
+              Flexible working hours structured to provide consistent 4 to 6-hour daily direct overlap with US and UK business hours.
+            </p>
+          </div>
+        </div>
+
+        <div class="tools-box">
+          <span class="tools-label">Core Technical Stack:</span>
+          <div class="tools-pills">
+            <span class="tool-pill">HTML5 / Semantic CSS</span>
+            <span class="tool-pill">Modern JavaScript</span>
+            <span class="tool-pill">GSAP &amp; ScrollTrigger</span>
+            <span class="tool-pill">Lenis Smooth Scroll</span>
+            <span class="tool-pill">Vercel Deployment</span>
+            <span class="tool-pill">GitHub Versioning</span>
+            <span class="tool-pill">AI-Assisted Development</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. PRODUCTS I BUILT AND LAUNCHED
+         ====================================================================== -->
+    <section class="section-padding" aria-label="Launched Independent Products">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Independent Software</div>
+          <h2 class="section-title">Products I built and launched.</h2>
+          <p class="section-desc">
+            Beyond custom client development, I design and operate specialized tools that solve real problems for local businesses.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div>
+              <div class="product-card-top">
+                <span class="badge-concept">SaaS Product</span>
+              </div>
+              <h3 class="product-title">AlwaysOn Assistant</h3>
+              <p class="product-desc">
+                An embeddable AI chat widget that answers visitor questions and captures leads for local service businesses 24 hours a day.
+              </p>
+            </div>
+            <a href="https://alwayson-assistant.vercel.app" class="btn btn-secondary btn-sm magnetic" target="_blank" rel="noopener noreferrer">
+              Visit AlwaysOn Assistant &#8599;
+            </a>
+          </div>
+
+          <div class="product-card">
+            <div>
+              <div class="product-card-top">
+                <span class="badge-concept">Reputation Tool</span>
+              </div>
+              <h3 class="product-title">ReviewShield AI</h3>
+              <p class="product-desc">
+                A tool that helps local businesses manage, monitor, and intelligently respond to their Google reviews to protect their local reputation.
+              </p>
+            </div>
+            <a href="https://smartreviewshield.com" class="btn btn-secondary btn-sm magnetic" target="_blank" rel="noopener noreferrer">
+              Visit ReviewShield AI &#8599;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="section-padding" aria-label="About Shivam Mishra">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-portrait-frame">
+            <img src="portrait.jpg" id="about-portrait-img" alt="Shivam Mishra, freelance web developer" width="420" height="525" loading="lazy" decoding="async" onerror="this.style.display='none'; document.getElementById('about-monogram').style.display='flex';">
+            <div id="about-monogram" style="display: none;" aria-label="Shivam Mishra Monogram">
+              SM
+              <span class="monogram-sub">Shivam Mishra</span>
+            </div>
+          </div>
+
+          <div class="about-content-box">
+            <div class="section-tag">About Me</div>
+            <h2 class="section-title">Independent developer focused on high-intent websites.</h2>
+            <p class="about-bio-text">
+              I am <strong>Shivam Mishra</strong>, a web developer from India. I design and build fast, animated websites and AI chat assistants for small businesses.
+            </p>
+            <p class="about-bio-text">
+              The three projects featured above are concept builds created to demonstrate exactly what I can build for your specific industry—complete with financing calculators, emergency service workflows, and frictionless booking engines.
+            </p>
+
+            <div class="stats-counter-grid">
+              <div class="stat-item">
+                <span id="stat-projects-count" class="stat-num">3</span>
+                <span class="stat-label">Concept builds ready to test</span>
+              </div>
+              <div class="stat-item">
+                <span id="stat-products-count" class="stat-num">2</span>
+                <span class="stat-label">Independent products launched</span>
+              </div>
+              <div class="stat-item">
+                <span id="stat-services-count" class="stat-num">3</span>
+                <span class="stat-label">Specialized service offerings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. FAQ ACCORDION (6 Questions, First Open by Default)
+         ====================================================================== -->
+    <section class="section-padding" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto;">
+          <div class="section-tag">Clear Answers</div>
+          <h2 class="section-title" style="max-width: 100%;">Frequently asked questions.</h2>
+          <p class="section-desc" style="margin-left: auto; margin-right: auto;">
+            Transparent details on timelines, payments, revisions, and code ownership.
+          </p>
+        </div>
+
+        <div id="faq-accordion" class="faq-accordion">
+          <!-- Item 1: Open by default -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="true" aria-controls="faq-panel-1" id="faq-trigger-1">
+              <span>How long does a website take to build?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-1" class="faq-panel" role="region" aria-labelledby="faq-trigger-1">
+              <div class="faq-panel-inner">
+                A focused landing page typically takes 3 to 5 business days. A multi-page business website (up to 5 pages) takes 7 to 10 days, while custom e-commerce stores take 14 to 21 days. Timelines start once brand assets and written copy are ready.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+              <span>How does payment work?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-2" class="faq-panel" role="region" aria-labelledby="faq-trigger-2">
+              <div class="faq-panel-inner">
+                Standard terms are 50% upfront to reserve the development sprint on my calendar, and 50% upon final sign-off before your site is deployed to your live domain. Invoicing is handled securely with clear receipts.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+              <span>Who owns the domain, hosting, and code?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-3" class="faq-panel" role="region" aria-labelledby="faq-trigger-3">
+              <div class="faq-panel-inner">
+                You own 100% of everything from day one. I set up hosting directly on your own free or low-cost Vercel/Netlify account and map your domain. If we ever part ways, you retain full ownership and clean, standard code with no proprietary lock-in.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+              <span>What do you need from me before we start?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-4" class="faq-panel" role="region" aria-labelledby="faq-trigger-4">
+              <div class="faq-panel-inner">
+                High-resolution logos, brand colors, any existing photos of your work, and your core service descriptions. If you don't have finished copy yet, I provide structured content worksheets to help you put it together quickly.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+              <span>How many revisions are included?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-5" class="faq-panel" role="region" aria-labelledby="faq-trigger-5">
+              <div class="faq-panel-inner">
+                Every project includes two structured rounds of revisions during the interactive preview milestone. Because you get to test a functional staging URL early, feedback is specific and changes happen quickly.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-6" id="faq-trigger-6">
+              <span>Can you add an AI assistant to my existing site?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-6" class="faq-panel" role="region" aria-labelledby="faq-trigger-6">
+              <div class="faq-panel-inner">
+                Yes. The AI chat assistant is built as a lightweight, embeddable script. It can be added to WordPress, Squarespace, Webflow, Shopify, or plain HTML websites within one business day.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. CONTACT SECTION (Direct Buttons, No Form)
+         ====================================================================== -->
+    <section id="contact" class="section-padding contact-section" aria-label="Contact Shivam Mishra">
+      <div class="container">
+        <div class="contact-box">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="contact-headline">Let's build yours.</h2>
+
+          <div class="contact-meta-info">
+            <span class="contact-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Typical reply time: <strong id="contact-reply-time">within a few hours</strong>
+            </span>
+            <span class="contact-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Location: <strong id="contact-location">India</strong>
+            </span>
+          </div>
+
+          <div class="contact-actions-grid">
+            <a href="https://wa.me/919899452192" id="contact-whatsapp-btn" class="contact-btn-card contact-btn--primary magnetic" target="_blank" rel="noopener noreferrer">
+              <span class="contact-btn-title">WhatsApp</span>
+              <span class="contact-btn-sub">+91 9899452192</span>
+            </a>
+
+            <a href="mailto:8hivammishra8@gmail.com" id="contact-email-btn" class="contact-btn-card magnetic">
+              <span class="contact-btn-title">Email</span>
+              <span class="contact-btn-sub">8hivammishra8@gmail.com</span>
+            </a>
+
+            <a href="tel:+919899452192" id="contact-phone-btn" class="contact-btn-card magnetic">
+              <span class="contact-btn-title">Phone</span>
+              <span class="contact-btn-sub">+91 9899452192</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       13. FOOTER (Bottom-Right Free for AI Widget)
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <span class="site-logo"><span></span> Shivam Mishra</span>
+        <div class="footer-nav">
+          <a href="#work">Work</a>
+          <a href="#assistant">AI Assistant</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://instagram.com/shivam.0nyx" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Shivam Mishra. All rights reserved.</div>
+        <div>The three demo projects are concept builds for fictional businesses.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Libraries First, Data, Logic, Motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="motion.js"></script>
+
+  <!-- ALWAYSON WIDGET SNIPPET GOES HERE -->
+</body>
+</html>
